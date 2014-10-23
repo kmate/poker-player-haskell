@@ -24,7 +24,7 @@ main = do
 
 serve:: PortNumber -> IO ()
 serve port = do
-    let config = defaultConfig { srvPort = port }
+    let config = defaultConfig { srvPort = port, srvHost = "0.0.0.0" }
     serverWith config $ \_ _ request -> do
         let body = rqBody request
         responseBody <- if null body
