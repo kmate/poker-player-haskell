@@ -1,1 +1,4 @@
 url: http://localhost:1900/
+port: 1900
+path: /
+dependencies: 
